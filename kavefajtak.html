@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Lucky kávézó - Kávéfajták</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <i class="fa-solid fa-clover"></i>
+                    Lucky</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Kezdőlap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./kavefajtak.html">Kávéfajták</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./sutemenyek.html">Sütemények</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="banner"></div> 
+    </header>
+	<div class="container">
+		<div class="row text-center">
+			<h1 class="my-5">Lucky - Kávéfajták</h1>
+		</div>
+		<div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+			<div class="col h-100"  data-bs-toggle="modal" data-bs-target="#americanoModal">
+				<div class="card h-100">
+					<img src="./img/CamericanoWhitener-min.jpg" class="card-img-top" alt="Americano">
+					<div class="card-body">
+						<h5 class="card-title text">Americano</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card h-100" data-bs-toggle="modal" data-bs-target="#blackModal">
+					<img src="./img/CblackCoffee-min.jpg" class="card-img-top" alt="Black coffee">
+					<div class="card-body">
+						<h5 class="card-title text">Black coffee</h5>
+					</div>
+				</div>
+			</div>
+            <div class="col">
+				<div class="card h-100" data-bs-toggle="modal" data-bs-target="#turkishModal">
+					<img src="./img/Ccoffeebeans-min.jpg" class="card-img-top" alt="Turkish coffee">
+					<div class="card-body">
+						<h5 class="card-title text">Turkish coffee</h5>
+					</div>
+				</div>
+			</div>                
+            <div class="col">
+				<div class="card h-100" data-bs-toggle="modal" data-bs-target="#milkModal">
+					<img src="./img/Ccoffeecup-min.jpg" class="card-img-top" alt="Coffee with milk">
+					<div class="card-body">
+						<h5 class="card-title text">Coffee with milk</h5>
+					</div>
+				</div>
+			</div>
+            <div class="col">
+				<div class="card h-100" data-bs-toggle="modal" data-bs-target="#macronModal">
+					<img src="./img/CcoffeeMacrons-min.jpg" class="card-img-top" alt="Coffee with macrons">
+					<div class="card-body">
+						<h5 class="card-title text">Coffee with macrons</h5>
+					</div>
+				</div>
+			</div>
+            <div class="col">
+				<div class="card h-100" data-bs-toggle="modal" data-bs-target="#latteModal">
+					<img src="./img/Clatte-min.jpg" class="card-img-top" alt="Latte">
+					<div class="card-body">
+						<h5 class="card-title text">Latte</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="row mt-5">
+			<div class="col-sm-6 col-lg-4 offset-lg-1">
+				<h3 class="pt-3">Eléthetőségek</h3>
+				<ul>
+					<li><i class="fa-regular fa-envelope mx-3"></i>6900 Makó, Posta utca 4-6.</li>
+					<li><i class="fa-solid fa-phone mx-3"></i>+36 60 4204 2000</li>
+					<li><i class="fa-solid fa-at mx-3"></i>zsirke@luckyface.hu</li>
+				</ul>
+			</div>
+			<div class="col-sm-6 col-lg-4 offset-lg-1">
+				<h3 class="pt-3">Feliratkozás hírlevélre</h3>
+				<form action="">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="button-addon2">
+						<button class="btn btn-outline-success" type="button" onclick="feliratkozas()" id="button-addon2">Feliratkozás</button>
+					</div>
+				</form>
+				<p>&copy; Lucky Kávézó 2023</p>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal modal-xl" tabindex="-1" id="americanoModal">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Americano</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="./img/CamericanoWhitener-min.jpg" alt="Americano" class="img-fluid">
+							</div>
+							<div class="col-sm-8">
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+									Obcaecati quia aperiam repudiandae labore quo ad laudantium 
+									reprehenderit blanditiis dolorem odit animi aliquid, aliquam 
+									quasi odio itaque, laboriosam vitae illum tempora!
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-bs-dismiss="modal">Bezár</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-xl" tabindex="-1" id="blackModal">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Black Coffee</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="./img/CblackCoffee-min.jpg" alt="Americano" class="img-fluid">
+							</div>
+							<div class="col-sm-8">
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+									Obcaecati quia aperiam repudiandae labore quo ad laudantium 
+									reprehenderit blanditiis dolorem odit animi aliquid, aliquam 
+									quasi odio itaque, laboriosam vitae illum tempora!
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-bs-dismiss="modal">Bezár</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-xl" tabindex="-1" id="turkishModal">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Turkish Coffee</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="./img/Ccoffeebeans-min.jpg" alt="Turkish coffee" class="img-fluid">
+							</div>
+							<div class="col-sm-8">
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+									Obcaecati quia aperiam repudiandae labore quo ad laudantium 
+									reprehenderit blanditiis dolorem odit animi aliquid, aliquam 
+									quasi odio itaque, laboriosam vitae illum tempora!
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-bs-dismiss="modal">Bezár</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-xl" tabindex="-1" id="milkModal">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Coffee with milk</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="./img/Ccoffeecup-min.jpg" alt="Coffee with milk" class="img-fluid">
+							</div>
+							<div class="col-sm-8">
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+									Obcaecati quia aperiam repudiandae labore quo ad laudantium 
+									reprehenderit blanditiis dolorem odit animi aliquid, aliquam 
+									quasi odio itaque, laboriosam vitae illum tempora!
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-bs-dismiss="modal">Bezár</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-xl" tabindex="-1" id="macronModal">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Coffee with macrons</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="./img/CcoffeeMacrons-min.jpg" alt="Coffee with macrons" class="img-fluid">
+							</div>
+							<div class="col-sm-8">
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+									Obcaecati quia aperiam repudiandae labore quo ad laudantium 
+									reprehenderit blanditiis dolorem odit animi aliquid, aliquam 
+									quasi odio itaque, laboriosam vitae illum tempora!
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-bs-dismiss="modal">Bezár</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-xl" tabindex="-1" id="latteModal">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Latte</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="./img/Clatte-min.jpg" alt="Latte" class="img-fluid">
+							</div>
+							<div class="col-sm-8">
+								<p>
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+									Obcaecati quia aperiam repudiandae labore quo ad laudantium 
+									reprehenderit blanditiis dolorem odit animi aliquid, aliquam 
+									quasi odio itaque, laboriosam vitae illum tempora!
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-bs-dismiss="modal">Bezár</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		function feliratkozas(){
+			alert("nyomod")
+		}
+	</script>
+</body>
+</html>
